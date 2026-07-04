@@ -1,0 +1,10 @@
+{
+  "name": "vuln-scanner-plugin",
+  "description": "Escanea URLs en busca de vulnerabilidades web (XSS, SQLi, CSRF, cabeceras faltantes, open redirect, exposicion de informacion) usando el backend Web Vulnerability Scanner.",
+  "version": "1.0.0",
+  "author": {
+    "name": "mary010-sky"
+  },
+  "homepage": "https://vulnerabilidad-web.sytes.net",
+  "license": "MIT"
+}

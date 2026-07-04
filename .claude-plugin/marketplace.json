@@ -1,0 +1,14 @@
+{
+  "name": "vuln-scanner-marketplace",
+  "owner": {
+    "name": "mary010-sky"
+  },
+  "description": "Marketplace con la skill de Claude Code para escanear vulnerabilidades web usando Web Vulnerability Scanner",
+  "plugins": [
+    {
+      "name": "vuln-scanner-plugin",
+      "source": "./plugins/vuln-scanner-plugin",
+      "description": "Escanea URLs en busca de vulnerabilidades web (XSS, SQLi, CSRF, cabeceras, etc.)"
+    }
+  ]
+}
