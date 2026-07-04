@@ -10,7 +10,7 @@ seguridad, open redirect, exposicion de informacion) usando el backend de
 Dentro de una sesion de Claude Code:
 
 ```
-/plugin marketplace add mary010-sky/vuln-scanner-marketplace
+/plugin marketplace add mary010-sky/skill-vuln-scanner
 /plugin install vuln-scanner-plugin@vuln-scanner-marketplace
 ```
 
