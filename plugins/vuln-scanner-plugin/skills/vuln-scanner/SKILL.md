@@ -32,12 +32,24 @@ antes de continuar (no existe ningun flujo de login automatico en esta skill).
 
 ## Uso
 
-Ejecuta el script `scripts/scan.py` que esta en la misma carpeta que este archivo
-`SKILL.md` (resuelve la ruta relativa a donde esta este SKILL.md, no a un path fijo,
-porque el plugin puede estar instalado en distintas ubicaciones segun el usuario):
+Este SKILL.md tiene un script hermano en `scripts/scan.py`, ubicado siempre en la misma
+carpeta que este archivo. Como este plugin puede quedar instalado en ubicaciones
+distintas segun el usuario (por ejemplo dentro de la cache de plugins de Claude Code),
+sigue estos pasos para ejecutarlo sin fallar:
+
+1. Si sabes con certeza la ruta de la carpeta donde se cargo este `SKILL.md`, usa esa
+   ruta directamente.
+2. Si no la conoces, busca el archivo con la herramienta Glob usando el patron
+   `**/vuln-scanner/scripts/scan.py` (o revisa `~/.claude/plugins/cache/` si el patron
+   no encuentra nada).
+3. Ejecuta el script con el interprete de Python disponible en el sistema. Prueba
+   primero `python3`; si el comando falla porque no existe (comun en Windows, donde
+   normalmente solo esta disponible `python`), reintenta con `python`:
 
 ```bash
-python <ruta-de-esta-skill>/scripts/scan.py <target_url> [--depth N] [--modules m1,m2,...] [--timeout N]
+python3 <ruta-encontrada>/scripts/scan.py <target_url> [--depth N] [--modules m1,m2,...] [--timeout N]
+# si falla por no existir python3:
+python <ruta-encontrada>/scripts/scan.py <target_url> [--depth N] [--modules m1,m2,...] [--timeout N]
 ```
 
 - `target_url` (obligatorio): URL completa a escanear, ej. `https://ejemplo.com`.
